@@ -9,13 +9,19 @@ import { initStore } from './store';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
+import {worker} from "../../test/mocks/browser";
 
 const basename = '/hw/store';
 
 const api = new ExampleApi(basename);
 const cart = new CartApi();
 const store = initStore(api, cart);
-
+// TODO env
+worker.start({
+    serviceWorker: {
+        url: `${basename}/mockServiceWorker.js`
+    }
+});
 const application = (
     <BrowserRouter basename={basename}>
         <Provider store={store}>
