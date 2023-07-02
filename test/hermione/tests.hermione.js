@@ -533,6 +533,7 @@ describe("Интеграционные тесты", function () {
     });
 
     await page.goto(`http://localhost:3000/hw/store/`);
+    await page.waitForSelector(".Application-Menu");
 
     const toggle = await page.$(".Application-Toggler");
 
