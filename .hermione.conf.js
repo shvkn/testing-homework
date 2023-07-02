@@ -11,6 +11,10 @@ module.exports = {
       desiredCapabilities: {
         browserName: "chrome",
       },
+      windowSize: {
+        width: 1920,
+        height: 10000
+      }
     },
   },
   plugins: {
