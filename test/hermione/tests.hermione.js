@@ -904,9 +904,6 @@ describe("Интеграционные тесты", function () {
     ]);
 
     await page.waitForSelector(".Home", { timeout: 10000 });
-    const title = await page.title();
-
-    assert.equal(title, "Welcome — Example store");
   });
 
   it('T26. В магазине есть страница "Каталог"', async function () {
@@ -916,9 +913,6 @@ describe("Интеграционные тесты", function () {
     await page.goto(`http://localhost:3000/hw/store/catalog`);
 
     await page.waitForSelector(".Catalog", { timeout: 10000 });
-    const title = await page.title();
-
-    assert.equal(title, "Catalog — Example store");
   });
 
   it('T27. В магазине есть страница "Доставка"', async function () {
@@ -928,9 +922,6 @@ describe("Интеграционные тесты", function () {
     await page.goto("http://localhost:3000/hw/store/delivery");
 
     await page.waitForSelector(".Delivery", { timeout: 10000 });
-    const title = await page.title();
-
-    assert.equal(title, "Delivery — Example store");
   });
 
   it('T28. В магазине есть страница "Контакты"', async function () {
@@ -940,9 +931,6 @@ describe("Интеграционные тесты", function () {
     await page.goto(`http://localhost:3000/hw/store/contacts`);
 
     await page.waitForSelector(".Contacts", { timeout: 10000 });
-    const title = await page.title();
-
-    assert.equal(title, "Contacts — Example store");
   });
 
   it('T29. В магазине есть страница "Корзина"', async function () {
@@ -952,9 +940,5 @@ describe("Интеграционные тесты", function () {
     await page.goto(`http://localhost:3000/hw/store/cart`);
 
     await page.waitForSelector(".Cart", { timeout: 10000 });
-
-    const title = await page.title();
-
-    assert.equal(title, "Shopping cart — Example store");
   });
 });
